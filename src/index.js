@@ -1,3 +1,4 @@
-import FileInput from "./file-input/container";
+import FileInput from "./formik-file-input";
+import ImageInput from "./formik-image-input";
 
-module.exports = { FileInput };
+module.exports = { FileInput, ImageInput };
