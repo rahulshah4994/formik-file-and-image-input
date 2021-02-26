@@ -86,11 +86,11 @@ export default function MyForm() {
 
 ### FileInput props
 
-| Prop name    | Description                                                                                                          | Default value | Example values                                                                                           |
-| ------------ | -------------------------------------------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------- |
-| name         | The name of the field as referenced in formik                                                                        | required      | `"file","image"`                                                                                         |
-| validFormats | An array of valid MIME formats                                                                                       | required      | `['image/png', 'image/svg','application/pdf']`                                                           |
-| component    | A custom styled component to handle the file upload. `onClick` and `fileName` props will be passed to this component | `<input>`     | `Component({onClick, fileName}) => <div onClick={onClick}>{fileName ? fileName : "Choose a file"}</div>` |
+| Prop name    | Description                                                                                                          | Default value           | Example values                                                                                           |
+| ------------ | -------------------------------------------------------------------------------------------------------------------- | ----------------------- | -------------------------------------------------------------------------------------------------------- |
+| name         | The name of the field as referenced in formik                                                                        | required                | `"file","image"`                                                                                         |
+| validFormats | An array of valid MIME formats                                                                                       | required                | `['image/png', 'image/svg','application/pdf']`                                                           |
+| component    | A custom styled component to handle the file upload. `onClick` and `fileName` props will be passed to this component | `<input type="file" />` | `Component({onClick, fileName}) => <div onClick={onClick}>{fileName ? fileName : "Choose a file"}</div>` |
 
 ### ImageInput props
 
@@ -98,7 +98,7 @@ export default function MyForm() {
 | ------------ | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
 | name         | The name of the field as referenced in formik                                                                              | required                                                                                         | `"file","image"`                                                                                                                 |
 | validFormats | An array of valid MIME formats                                                                                             | `['image/png','image/svg+xml', 'image/jpeg', 'image/gif','image/bmp','image/tiff','image/webp']` | `['image/png', 'image/svg','application/pdf']`                                                                                   |
-| component    | A custom styled component to handle the file upload. `onClick`,`src` and `fileName` props will be passed to this component | `<input>`                                                                                        | `Component({onClick, src, fileName}) => <div onClick={onClick}><img src={src} />{fileName ? fileName : "Choose an image"}</div>` |
+| component    | A custom styled component to handle the file upload. `onClick`,`src` and `fileName` props will be passed to this component | `<input type="file" />`                                                                          | `Component({onClick, src, fileName}) => <div onClick={onClick}><img src={src} />{fileName ? fileName : "Choose an image"}</div>` |
 
 ## License
 

@@ -1,9 +1,9 @@
-import React, { useCallback, useState, useRef, useCallback } from "react";
+import React, { useCallback, useState, useRef } from "react";
 import { useFormikContext } from "formik";
 
-import FileInput from "./formik-file-input/component";
+import FileInputComponent from "./formik-file-input/component";
 
-export const FileInputContainer = ({
+export const FileInput = ({
 	component: Component,
 	className,
 	validFormats,
@@ -63,7 +63,7 @@ export const FileInputContainer = ({
 
 	return (
 		<div>
-			<FileInput {...fileInputProps} />
+			<FileInputComponent {...fileInputProps} />
 			{!hideName && <p>{values[name] && values[name].name}</p>}
 			{!hideError && touched[name] && <p>{errors[name]}</p>}
 			{!hideDelete && (
@@ -75,7 +75,7 @@ export const FileInputContainer = ({
 	);
 };
 
-import ImageInput from "./formik-image-input/component";
+import ImageInputComponent from "./formik-image-input/component";
 
 const universalImageFormats = [
 	"image/png",
@@ -87,7 +87,7 @@ const universalImageFormats = [
 	"image/webp",
 ];
 
-export const ImageInputContainer = ({
+export const ImageInput = ({
 	component: Component,
 	className,
 	validFormats = universalImageFormats,
@@ -172,7 +172,7 @@ export const ImageInputContainer = ({
 
 	return (
 		<div>
-			<ImageInput {...imageInputProps} />
+			<ImageInputComponent {...imageInputProps} />
 			{!hideName && <p>{values[name] && values[name].name}</p>}
 			{!hideError && touched[name] && <p>{errors[name]}</p>}
 			{!hideEdit && (

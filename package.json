@@ -1,9 +1,9 @@
 {
 	"name": "formik-file-and-image-input",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Ready to use file and image input for formik",
 	"main": "dist/bundle.js",
-	"source": "src/index.js",
+	"source": "./lib/index.js",
 	"module": "./lib/index.js",
 	"keywords": [
 		"formik",
@@ -15,9 +15,9 @@
 	"author": "Rahul Shah",
 	"license": "ISC",
 	"peerDependencies": {
-		"formik": "^2.2.6",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1"
+		"formik": "2.x",
+		"react": "16.x",
+		"react-dom": "16.x"
 	},
 	"dependencies": {
 		"formik": "^2.2.6"
