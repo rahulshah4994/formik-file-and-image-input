@@ -4,10 +4,7 @@
 	"description": "Ready to use file and image input for formik",
 	"main": "dist/bundle.js",
 	"source": "src/index.js",
-	"scripts": {
-		"build": "webpack --mode=production",
-		"start": "webpack --mode=development"
-	},
+	"module": "./lib/index.js",
 	"keywords": [
 		"formik",
 		"file",
@@ -17,17 +14,21 @@
 	],
 	"author": "Rahul Shah",
 	"license": "ISC",
-	"dependencies": {
+	"peerDependencies": {
 		"formik": "^2.2.6",
-		"react": "^17.0.1",
-		"react-dom": "^17.0.1"
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
+	},
+	"dependencies": {
+		"formik": "^2.2.6"
 	},
 	"devDependencies": {
-		"@babel/preset-react": "^7.12.13",
+		"@babel/cli": "^7.13.0",
 		"@babel/core": "^7.12.17",
+		"@babel/plugin-proposal-optional-chaining": "^7.13.0",
+		"@babel/plugin-transform-react-jsx": "^7.12.17",
 		"@babel/preset-env": "^7.12.17",
-		"babel-loader": "^8.2.2",
-		"webpack": "^5.23.0",
-		"webpack-cli": "^4.5.0"
+		"@babel/preset-react": "^7.12.13",
+		"babel-loader": "^8.2.2"
 	}
 }
