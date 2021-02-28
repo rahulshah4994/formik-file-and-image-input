@@ -1,6 +1,6 @@
 {
 	"name": "formik-file-and-image-input",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "Ready to use file and image input for formik",
 	"main": "dist/bundle.js",
 	"source": "./lib/index.js",
