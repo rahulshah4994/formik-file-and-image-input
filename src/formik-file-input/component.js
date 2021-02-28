@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import React from "../../node_modules/react";
 
 const DefaultComponent = ({ passRef, hidden, onChange }) => (
 	<input
