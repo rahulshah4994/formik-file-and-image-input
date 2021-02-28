@@ -24,7 +24,7 @@ yarn add formik-file-and-image-input
 import React from "react";
 import { Formik, Form } from "formik";
 import * as yup from "yup";
-import { FileInput, ImageInput } from "formik-file-and-image-input";
+import { FileInput, ImageInput } from "formik-file-and-image-input/lib";
 
 function CustomFileInputWrapper = ({onClick, fileName}) => {
     return (
