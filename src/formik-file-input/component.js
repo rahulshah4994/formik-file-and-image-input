@@ -1,4 +1,4 @@
-import React from "../../node_modules/react";
+import React from "react";
 
 const DefaultComponent = ({ passRef, hidden, onChange }) => (
 	<input
@@ -10,7 +10,7 @@ const DefaultComponent = ({ passRef, hidden, onChange }) => (
 );
 
 const FileInput = ({ InputComponent, className, handleChange, fileName }) => {
-	const inputRef = useRef(null);
+	const inputRef = React.useRef(null);
 
 	const Component = React.memo(() => {
 		if (InputComponent) {
@@ -24,7 +24,7 @@ const FileInput = ({ InputComponent, className, handleChange, fileName }) => {
 		return <DefaultComponent passRef={inputRef} onChange={handleChange} />;
 	});
 
-	const showInputWindow = useCallback(() => {
+	const showInputWindow = React.useCallback(() => {
 		if (InputComponent) {
 			inputRef.current.click();
 		}

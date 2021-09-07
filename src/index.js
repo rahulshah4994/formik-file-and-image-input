@@ -1,4 +1,4 @@
-const { FileInput } = require("./formik-file-input/container");
-const { ImageInput } = require("./formik-image-input/container");
+const { FileInput } = require("./formik-file-input/container.js");
+const { ImageInput } = require("./formik-image-input/container.js");
 
-export default { FileInput, ImageInput };
+module.exports = { FileInput, ImageInput };

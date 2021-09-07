@@ -1,7 +1,7 @@
-import React from "../../node_modules/react";
+import React from "react";
 import { useFormikContext } from "formik";
 
-import FileInputComponent from "./component";
+import FileInputComponent from "./component.js";
 
 export const FileInput = ({
 	component: Component,
@@ -21,7 +21,7 @@ export const FileInput = ({
 		setFieldError,
 	} = useFormikContext();
 
-	const isFileValid = useCallback(
+	const isFileValid = React.useCallback(
 		(file) => {
 			if (!validFormats.includes(file.type)) {
 				setFieldValue(name, null);
@@ -49,7 +49,7 @@ export const FileInput = ({
 		}
 	};
 
-	const handleFileDelete = useCallback(() => {
+	const handleFileDelete = React.useCallback(() => {
 		setFieldValue(name, null);
 		setFieldError(name, null);
 	}, []);

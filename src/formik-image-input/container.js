@@ -1,6 +1,6 @@
-import React from "../../node_modules/react";
+import React from "react";
 import { useFormikContext } from "formik";
-import ImageInputComponent from "./component";
+import ImageInputComponent from "./component.js";
 
 const universalImageFormats = [
 	"image/png",
@@ -30,10 +30,10 @@ export const ImageInput = ({
 		setFieldTouched,
 		setFieldError,
 	} = useFormikContext();
-	const [imageUrl, setImageUrl] = useState(null);
-	const inputRef = useRef(null);
+	const [imageUrl, setImageUrl] = React.useState(null);
+	const inputRef = React.useRef(null);
 
-	const isFileValid = useCallback(
+	const isFileValid = React.useCallback(
 		(file) => {
 			if (!validFormats.includes(file.type)) {
 				setFieldValue(name, null);
@@ -70,13 +70,13 @@ export const ImageInput = ({
 		}
 	};
 
-	const handleImageDelete = useCallback(() => {
+	const handleImageDelete = React.useCallback(() => {
 		setFieldValue(name, null);
 		setFieldError(name, null);
 		setImageUrl(null);
 	}, []);
 
-	const showInputWindow = useCallback(
+	const showInputWindow = React.useCallback(
 		(e) => {
 			inputRef.current.click();
 			e.stopPropagation();
@@ -101,7 +101,7 @@ export const ImageInput = ({
 			{!hideName && <p>{values[name] && values[name].name}</p>}
 			{!hideError && touched[name] && <p>{errors[name]}</p>}
 			{!hideEdit && (
-				<button type="button" onClick={handleImageEdit}>
+				<button type="button" onClick={showInputWindow}>
 					Edit
 				</button>
 			)}
